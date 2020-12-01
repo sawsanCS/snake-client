@@ -10,8 +10,13 @@ const connect = function() {
   conn.on('connect', () => {
     console.log('Successfully connected to game server');
       conn.write('Name: SSM');
-      
       conn.write("Move: up");
+      conn.write("Move: up");
+      conn.write("Move: left");
+      conn.write("Move: up");
+      conn.write("Move: right");
+      conn.write("Move: down");
+      conn.write("Move: down");
     });
   conn.on('data', (data) => {
     console.log('Server says: ', data);

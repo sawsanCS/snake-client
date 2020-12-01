@@ -10,13 +10,15 @@ const connect = function() {
   conn.on('connect', () => {
     console.log('Successfully connected to game server');
       conn.write('Name: SSM');
-      setTimeout(() => {conn.write("Move: up");} , 1000)
+      conn.write('Say: Hi');
+      
+      /*setTimeout(() => {conn.write("Move: up");} , 1000)
       setTimeout(() => {conn.write("Move: up");} , 2000)
       setTimeout(() => {conn.write("Move: left");} , 3000)
       setTimeout(() => {conn.write("Move: left");} , 4000)
       setTimeout(() => {conn.write("Move: down");} , 5000)
       setTimeout(() => {conn.write("Move: down");} , 6000)
-      setTimeout(() => {conn.write("Move: right");} , 7000)
+      setTimeout(() => {conn.write("Move: right");} , 7000)*/
       
     });
   conn.on('data', (data) => {

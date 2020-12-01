@@ -1,4 +1,6 @@
-const setupInput = function() {
+let connection;
+const setupInput = function(conn) {
+  connection = conn;
   const stdin = process.stdin;
   stdin.setRawMode(true);
   stdin.setEncoding('utf8');
@@ -12,20 +14,20 @@ const handleUserInput = function(data) {
     process.exit();
   }
   if (data === 'w') {
-    conn.write('Move: up');
+    connection.write('Move: up');
     console.log('up');
   }
   if (data === 'a') {
-    conn.write('Move: left');
+    connection.write('Move: left');
     console.log('left');
   }
   if (data === 's') {
-    conn.write('Move: down');
+    connection.write('Move: down');
     console.log('down');
   }
   if (data === 'd') {
-    conn.write('Move: right');
+    connection.write('Move: right');
     console.log('right');
   }
 };
-module.exports = setupInput, handleUserInput;
+module.exports = setupInput;

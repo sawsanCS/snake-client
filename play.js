@@ -1,6 +1,6 @@
 
 const connect = require('./client');
-const {setupInput, handleUserInput} = require ('./input')
+const setupInput = require ('./input')
 console.log('Connecting ...');
 connect();
 /**
@@ -8,4 +8,4 @@ connect();
  * Specifically, so that we can handle user input via stdin
  */
 
-setupInput;
+setupInput(connect());
